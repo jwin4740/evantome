@@ -28,11 +28,10 @@ class ScraperUtils:
             return window.location.href
         """)
 
-    def create_category_object(self, category_url, category_name):
+    def create_category_object(self, link):
         post = {
-            "category_url": category_url,
-            "category_name": category_name,
-            "scraped": False,
+            "url": link,
+            "checked": False,
             "date_added": datetime.datetime.utcnow()
 
         }
